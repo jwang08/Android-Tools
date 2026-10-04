@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Q2</string>
+    <array name="spinner_values">
+        <item>Next day</item>
+        <item>Second day</item>
+        <item>Normal</item>
+    </array>
+
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50sp">
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/priceLabel"
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:layout_centerVertical="true"
+                />
+            <EditText
+                android:id="@+id/priceInput"
+                android:layout_width="60sp"
+                android:layout_height="50sp"
+                android:layout_toEndOf="@id/priceLabel"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/warrantyLabel"
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warranty"
+                android:layout_centerVertical="true"
+                />
+            <ToggleButton
+                android:id="@+id/warrantyInput"
+                android:layout_width="60sp"
+                android:layout_height="50sp"
+                android:layout_toEndOf="@id/warrantyLabel"
+                android:textOff="No"
+                android:textOn="Yes"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/InsuranceLabel"
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insurance"
+                android:layout_centerVertical="true"
+                />
+            <Switch
+                android:id="@+id/insuranceInput"
+                android:layout_width="60sp"
+                android:layout_height="50sp"
+                android:layout_toEndOf="@id/InsuranceLabel"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/deliveryLabel"
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery cost"
+                android:layout_centerVertical="true"
+                />
+            <Spinner
+                android:id="@+id/deliveryInput"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_toEndOf="@id/deliveryLabel"
+                android:entries="@array/spinner_values"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/costLabel"
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Cost"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/output"
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_toEndOf="@id/costLabel"
+                android:text="0"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculate"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:text="Calculate"
+        />
+</RelativeLayout>
