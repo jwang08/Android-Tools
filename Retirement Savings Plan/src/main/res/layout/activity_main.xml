@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/principalLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="30sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="20sp"
+        android:text="Principal"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/principalInput"
+        android:layout_width="60sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="20sp"
+        android:layout_toEndOf="@id/additionLabel"
+        android:layout_alignBottom="@id/principalLabel"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:id="@+id/additionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_below="@id/principalLabel"
+        android:layout_alignStart="@id/principalLabel"
+        android:text="Annual Addition"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/additionInput"
+        android:layout_width="60sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/principalLabel"
+        android:layout_alignStart="@id/principalInput"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:id="@+id/yearLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_below="@id/additionLabel"
+        android:layout_alignStart="@id/principalLabel"
+        android:text="Number of Years"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/yearInput"
+        android:layout_width="60sp"
+        android:layout_height="50sp"
+        android:layout_alignStart="@id/principalInput"
+        android:layout_below="@id/additionInput"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:id="@+id/rateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_below="@id/yearLabel"
+        android:layout_alignStart="@id/principalLabel"
+        android:text="Rate of Return"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/rateInput"
+        android:layout_width="60sp"
+        android:layout_height="50sp"
+        android:layout_alignStart="@id/principalInput"
+        android:layout_below="@id/yearLabel"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        />
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rateLabel"
+        android:layout_marginTop="20sp"
+        android:layout_alignStart="@id/rateLabel"
+        android:text="Submit"
+        android:onClick="compute"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="#D2C4E9">
+
+    <EditText
+        android:id="@+id/keyInput"
+        android:layout_width="300sp"
+        android:layout_height="200sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:layout_marginTop="50sp"
+        android:inputType="number"
+        android:text="0"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:maxLength="200"/>
+    <Button
+        android:id="@+id/encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/keyInput"
+        android:layout_margin="10sp"
+        android:text="Submit"
+        android:onClick="submit"
+        />
+</RelativeLayout>
