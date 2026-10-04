@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveActivity"
+    android:background="#D2C4E9">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="200sp"
+        android:layout_height="100sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:layout_marginTop="50sp"
+        android:inputType="number"
+        android:hint="#"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:maxLength="10"
+        />
+    <Button
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/input"
+        android:layout_margin="10sp"
+        android:text="Submit"
+        android:onClick="submit"
+        />
+</RelativeLayout>

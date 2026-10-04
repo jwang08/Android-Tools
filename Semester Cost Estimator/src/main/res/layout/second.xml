@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="30sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="20sp"
+        android:layout_above="@id/creditInput"
+        android:layout_centerHorizontal="true"
+        android:text="Number of Credits:"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/creditInput"
+        android:layout_width="100sp"
+        android:layout_height="60sp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center|bottom"
+        android:text="0"
+        android:inputType="number"
+        />
+    <RelativeLayout
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40sp"
+            android:layout_centerVertical="true"
+            android:text="Back"
+            android:onClick="back"
+            />
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40sp"
+            android:layout_toEndOf="@id/back"
+            android:layout_centerVertical="true"
+            android:text="Next"
+            android:onClick="next"
+            />
+    </RelativeLayout>
+</RelativeLayout>

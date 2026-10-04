@@ -1,0 +1,51 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthActivity">
+
+
+
+    <CheckBox
+        android:id="@+id/dormitory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dormitory ($1000)"
+        android:layout_above="@id/dining"
+        android:layout_centerHorizontal="true"/>
+    <CheckBox
+        android:id="@+id/dining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dining ($500)"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40sp"
+            android:layout_centerVertical="true"
+            android:text="Back"
+            android:onClick="back"
+            />
+        <Button
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40sp"
+            android:layout_toEndOf="@id/back"
+            android:layout_centerVertical="true"
+            android:text="Next"
+            android:onClick="next"
+            />
+    </RelativeLayout>
+</RelativeLayout>

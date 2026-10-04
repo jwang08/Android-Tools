@@ -1,0 +1,55 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:id="@+id/under"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undergraduate ($300 Per Credit)"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/gradu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graduate ($400 Per Credit)"/>
+    </RadioGroup>
+    <RelativeLayout
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40sp"
+            android:layout_centerVertical="true"
+            android:text="Back"
+            android:onClick="back"
+            />
+        <Button
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40sp"
+            android:layout_toEndOf="@id/back"
+            android:layout_centerVertical="true"
+            android:text="Next"
+            android:onClick="next"
+            />
+    </RelativeLayout>
+</RelativeLayout>

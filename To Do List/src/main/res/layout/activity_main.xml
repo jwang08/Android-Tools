@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#D2C4E9">
+<ScrollView
+    android:layout_marginTop="100sp"
+    android:layout_width="wrap_content"
+    android:layout_height="200sp"
+    android:layout_centerHorizontal="true"
+    android:background="@color/white"
+    android:layout_below="@id/buttons">
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:background="@color/white"
+        android:padding="10sp"/>
+</ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Add"
+            android:onClick="add"/>
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_toEndOf="@id/add"
+            android:text="Remove"
+            android:onClick="remove"/>
+        <Button
+            android:id="@+id/modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_toEndOf="@id/remove"
+            android:text="Modify"
+            android:onClick="modify"/>
+    </RelativeLayout>
+</RelativeLayout>
