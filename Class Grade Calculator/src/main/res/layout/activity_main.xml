@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50sp">
+        <TableRow>
+            <TextView
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/programLabel"
+                android:text="Assignments (0-200)"
+                />
+            <EditText
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:id="@+id/programInput"
+                android:hint="0"
+                android:inputType="number"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/midLabel"
+                android:text="Midterm (0-100)"
+                />
+            <EditText
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:id="@+id/midInput"
+                android:hint="0"
+                android:inputType="number"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/finalLabel"
+                android:text="Final (0-100)"
+                />
+            <EditText
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:id="@+id/finalInput"
+                android:hint="0"
+                android:inputType="number"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scoreLabel"
+                android:text="Total Score"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:id="@+id/scoreOut"
+                style="@style/GreenStyle"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/GreenStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/letterLabel"
+                android:text="Letter Grade"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:id="@+id/letterOut"
+                style="@style/GreenStyle"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/calculate"
+        style="@style/ButtonStyle"
+        android:text="Calculate"
+        android:layout_below="@id/table">
+    </Button>
+
+</RelativeLayout>
