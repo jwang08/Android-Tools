@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AFE1AF"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:background="#AAAAAA"
+        android:hint="Address"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:background="#AAAAAA"
+        android:hint="Subject"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/subject"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:background="#AAAAAA"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:hint="Message"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_marginTop="10sp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:text="Send"
+            android:onClick="send"/>
+        <Button
+            android:id="@+id/encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/send"
+            android:layout_margin="5sp"
+            android:text="Encrypt"
+            android:onClick="encrypt"/>
+        <Button
+            android:id="@+id/decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_toEndOf="@id/encrypt"
+            android:text="Decrypt"
+            android:onClick="decrypt"/>
+        <Button
+            android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_toEndOf="@id/decrypt"
+            android:text="Key"
+            android:onClick="key"/>
+    </RelativeLayout>
+</RelativeLayout>
+

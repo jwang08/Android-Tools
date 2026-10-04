@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AAAAAA"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="20sp">
+
+        <TextView
+            android:id="@+id/creditsLabel"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Number of Credits"/>
+
+        <EditText
+            android:id="@+id/credits"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/creditsLabel"/>
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/credits"
+            android:layout_marginTop="10sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Degree Status"/>
+        <RadioGroup
+            android:id="@+id/statusGroup"
+            android:layout_below="@id/statusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/grad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Graduate ($800 per credit)"/>
+            <RadioButton
+                android:id="@+id/under"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Undergraduate ($500 per credit)"/>
+            <RadioButton
+                android:id="@+id/non"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non-degree ($300 per credit)"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/stateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusGroup"
+            android:layout_marginTop="10sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Degree Status"/>
+        <RadioGroup
+            android:id="@+id/stateGroup"
+            android:layout_below="@id/stateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/inState"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In State (x1)"/>
+            <RadioButton
+                android:id="@+id/out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Out of State (x2)"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/optionalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateGroup"
+            android:layout_marginTop="10sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Optional"/>
+        <CheckBox
+            android:id="@+id/dorm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionalLabel"
+            android:text="Dormitory ($5000)"/>
+        <CheckBox
+            android:id="@+id/dining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dorm"
+            android:text="Dining ($2000)"/>
+        <CheckBox
+            android:id="@+id/parking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dining"
+            android:text="Parking ($1000)"/>
+        <TextView
+            android:id="@+id/outputLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/parking"
+            android:layout_marginTop="10sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Output: "/>
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/parking"
+            android:layout_toEndOf="@id/outputLabel"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="10sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="N/A"/>
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/body"
+        android:text="Calculate"
+        android:layout_centerHorizontal="true"
+        android:onClick="calc"/>
+</RelativeLayout>
