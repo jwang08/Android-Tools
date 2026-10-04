@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AFE1AF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:padding="10dp"
+            android:backgroundTint="#702963"
+            android:text="Play"
+            android:onClick="play"/>
+
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/play"
+            android:layout_alignBottom="@id/play"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:backgroundTint="#702963"
+            android:text="Pause"
+            android:onClick="pause"/>
+
+        <Button
+            android:id="@+id/resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pause"
+            android:layout_alignBottom="@id/pause"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:backgroundTint="#702963"
+            android:text="Resume"
+            android:onClick="resume"/>
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/resume"
+            android:layout_alignBottom="@id/pause"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:backgroundTint="#702963"
+            android:text="Stop"
+            android:onClick="stop"/>
+    </RelativeLayout>
+
+</RelativeLayout>
+
