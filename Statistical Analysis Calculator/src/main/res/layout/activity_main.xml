@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:layout_marginStart="60sp"
+        android:gravity="bottom|center"
+        android:textSize="50sp"
+        android:inputType="text"
+        android:hint="0 0"/>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:layout_below="@id/input"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:id="@+id/sum"
+            android:text="sum"
+            style="@style/ButtonStyle"
+            android:onClick="calculate"
+            />
+        <Button
+            android:id="@+id/mean"
+            android:text="mean"
+            style="@style/ButtonStyle"
+            android:onClick="calculate"
+            />
+        <Button
+            android:id="@+id/median"
+            android:text="median"
+            style="@style/ButtonStyle"
+            android:onClick="calculate"
+            />
+        <Button
+            android:id="@+id/stdv"
+            android:text="stdv"
+            style="@style/ButtonStyle"
+            android:onClick="calculate"
+            />
+        <Button
+            android:id="@+id/min"
+            android:text="min"
+            style="@style/ButtonStyle"
+            android:onClick="calculate"
+            />
+        <Button
+            android:id="@+id/max"
+            android:text="max"
+            style="@style/ButtonStyle"
+            android:onClick="calculate"
+            />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/output"
+        style="@style/GreenStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="0"
+        />
+
+
+</RelativeLayout>
